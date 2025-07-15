@@ -40,9 +40,9 @@ public class GameGUI extends JFrame {
     private String playerName;
 
     // Colori consigliati: puoi cambiarli!
-    private static final Color BACKGROUND_COLOR = new Color(30, 30, 40); // Grigio-blu scuro, per un'atmosfera misteriosa
-    private static final Color TEXT_COLOR = new Color(200, 200, 200); // Grigio chiaro per il testo
-    private static final Color BORDER_COLOR = new Color(70, 70, 80); // Grigio leggermente più chiaro per i bordi
+    private static final Color BACKGROUND_COLOR = new Color(30, 30, 40); 
+    private static final Color TEXT_COLOR = new Color(200, 200, 200); 
+    private static final Color BORDER_COLOR = new Color(70, 70, 80); 
 
     public GameGUI(String playerName) {
         this.playerName = playerName;
@@ -52,7 +52,6 @@ public class GameGUI extends JFrame {
         setLocationRelativeTo(null);
 
         setLayout(new BorderLayout(10, 10));
-        // Imposta il colore di sfondo del JFrame stesso, se visibile
         getContentPane().setBackground(BACKGROUND_COLOR);
 
         // Pannello superiore per le informazioni di stato
@@ -83,8 +82,8 @@ public class GameGUI extends JFrame {
         outputArea.setLineWrap(true);
         outputArea.setWrapStyleWord(true);
         outputArea.setFont(new Font("Monospaced", Font.PLAIN, 14));
-        outputArea.setBackground(BACKGROUND_COLOR.brighter()); // Un colore leggermente più chiaro per l'area di testo
-        outputArea.setForeground(TEXT_COLOR); // Colore del testo dell'output
+        outputArea.setBackground(BACKGROUND_COLOR.brighter()); 
+        outputArea.setForeground(TEXT_COLOR); 
         
         JScrollPane scrollPane = new JScrollPane(outputArea);
         scrollPane.setBorder(BorderFactory.createLineBorder(BORDER_COLOR, 1)); // Bordo del scroll pane
@@ -134,9 +133,9 @@ public class GameGUI extends JFrame {
 
     // Metodo helper per stilizzare i bottoni
     private void styleButton(JButton button) {
-        button.setBackground(BORDER_COLOR.darker()); // Un colore più scuro per il bottone
-        button.setForeground(TEXT_COLOR); // Testo chiaro
-        button.setFocusPainted(false); // Rimuove il bordo di focus
+        button.setBackground(BORDER_COLOR.darker()); 
+        button.setForeground(TEXT_COLOR); 
+        button.setFocusPainted(false); 
         button.setFont(new Font("Arial", Font.BOLD, 12));
     }
 
@@ -184,7 +183,6 @@ public class GameGUI extends JFrame {
 
     public void disableInput() {
         inputField.setEnabled(false);
-        // Puoi anche disabilitare i pulsanti salva/carica o aggiungere un pulsante "Nuova Partita"
     }
 
     // Metodo per mostrare un enigma o una domanda che richiede input all'utente
@@ -203,10 +201,9 @@ public class GameGUI extends JFrame {
                 "Il Custode di Cenere ti attacca! Inserisci la combinazione di Sigilli (es. saggezza vita percezione memoria) per affrontarlo:",
                 "Combattimento con il Custode", JOptionPane.QUESTION_MESSAGE);
         if (combination != null) {
-            gameController.processCommand("affronta " + combination.trim()); // Un nuovo comando interno per il boss
+            gameController.processCommand("affronta " + combination.trim()); 
         } else {
             displayMessage("Hai esitato... il Custode si rafforza e ti colpisce!");
-            // Potresti qui applicare una penalità o un game over immediato se non si risponde.
         }
     }
 }
