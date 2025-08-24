@@ -46,7 +46,7 @@ public class StartScreen extends JFrame {
         add(northPanel, BorderLayout.NORTH);
 
         JPanel centerPanel = new JPanel();
-        centerPanel.setLayout(new GridBagLayout()); // Usa GridBagLayout per un controllo più preciso
+        centerPanel.setLayout(new GridBagLayout()); 
         GridBagConstraints gbc = new GridBagConstraints();
         gbc.insets = new Insets(5, 5, 5, 5); // Spazio tra i componenti
 
