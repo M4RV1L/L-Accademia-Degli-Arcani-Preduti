@@ -62,7 +62,7 @@ La chiave del successo risiede nella raccolta dei quattro Sigilli della Conoscen
 
 **Competenze di Ogni Classe:**
 
-La classe **Main** è il punto di ingresso dell'applicazione. Inizializza l'interfaccia utente uniziale (**StartScreen**).
+La classe **Main** è il punto di ingresso dell'applicazione. Inizializza l'interfaccia utente iniziale (**StartScreen**).
 
 La classe **StartScreen** gestisce l'interfaccia grafica iniziale del gioco. Acquisisce il nome del giocatore. Avvia il **GameGUI** e il **GameController** una volta che il giocatore inizia.
 
